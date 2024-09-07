@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+
+.footer-main-cont {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center; 
+    height: 137px;
+    background-color: #029491;
+    color: #FFFFFF;
+    position: relative; 
+}
+
+.footer-logo {
+    height: 100%; 
+    margin-left: 60px; 
+    position: absolute;
+    left: 0;
+}
+
+.footer-logo-mobile {
+    height: 111px; 
+    margin-left: 18px; 
+    margin-top: -55px; 
+    position: absolute;
+    left: 0;
+}
+
+.footer-text {
+    font-size: large;
+    margin-bottom: 20px; 
+    font-family: Inter;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 16.94px;
+    text-align: right;
+    
+
+}
+
+.copyright {
+    font-size: large;
+    text-align: right;
+    font-family: Inter;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14.52px;
+}
+
+p {
+    margin: 0;
+    margin-right: 45px;
+}
