@@ -1,4 +1,5 @@
 import React from 'react'
+import UserInfo from './userInfo/userInfo.js'
 import userData from "./user/user.js"
 import { Link } from 'react-router-dom'
 import './header.css'
@@ -24,18 +25,6 @@ class Header extends React.Component {
         this.setState({ screenWidth: window.innerWidth });
     };
 
-    clean = () => {
-        console.log(1)
-        localStorage.setItem('requestData', null)
-        localStorage.setItem('histograms', null)
-        localStorage.setItem('ids', null)
-        localStorage.setItem('documents', null)            
-    };
-
-    handleLogin = () => {
-        localStorage.setItem('isAuth', true);
-        window.location.reload();
-    };
 
     handleLogout = () => {
         localStorage.removeItem('token');
@@ -58,7 +47,9 @@ class Header extends React.Component {
 
                         {isAuth && 
                             <div className='user-isAuth-cont'>
-                                <div className='user-info-mobile'>USERINFO</div>
+                                <div className='user-info-mobile'>
+                                    <UserInfo/>
+                                </div>
                             </div>
                         }
 
@@ -72,7 +63,7 @@ class Header extends React.Component {
                             
                 <div className="nav-cont">
                     <nav className='nav-bar'>
-                        <Link  className='link-to' to='/'>Главная</Link >
+                        <Link  className='link-to' to='/'>Главная</Link>
                         <a>Тарифы</a>
                         <a>FAQ</a>
                     </nav>
@@ -82,7 +73,9 @@ class Header extends React.Component {
                 ? 
                 <div className='user-isAuth-cont'>
 
-                    <div className='user-info'>USERINFO</div>
+                    <div className='user-info'>
+                        <UserInfo/>
+                    </div>
 
                         <div className='user-badge-cont'>
                             <div className='user-name-cont '>
@@ -98,9 +91,9 @@ class Header extends React.Component {
                     <div className='user-sign'> 
                         <a>Зарегистрироваться</a> 
                     </div> 
-                    <div class="rectangle"></div>
+                    <div className="rectangle"></div>
                     <div className='sign-in-btn'>
-                        <a className='link-to' to='/login' onClick= {this.handleLogin}>Войти</a>
+                        <Link className='link-to' to='/login'>Войти</Link>
                     </div>
                 </div>  
                 }
